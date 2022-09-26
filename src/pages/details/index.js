@@ -14,15 +14,18 @@ function Details () {
         .then(response => response.json())
         .then(data => {
 
-            const { title, poster_path, overview, release_date } = data;
+
+            const { title, poster_path, overview, release_date, vote_average } = data;
  
             const movie = {
                 id,
                 title,
                 sinopse: overview,
                 image: `${image_path}${poster_path}`,
-                releaseDate: release_date
+                releaseDate: release_date,
+                voteAverage: vote_average.toFixed(1)
             }
+            
             setMovie(movie)
         })
     }, [id])
@@ -35,6 +38,7 @@ function Details () {
                     <h1>{movie.title}</h1>
                     <span>Sinopse: {movie.sinopse}</span>
                     <span class="release-date">Release date: {movie.releaseDate}</span>
+                    <span>Votos: {movie.voteAverage}</span>
                     <Link to='/'><button>Go back</button></Link>
                 </div>
             </div>
