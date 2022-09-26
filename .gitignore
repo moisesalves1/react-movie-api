@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+#API Key
+/src/config
+
 # production
 /src/build
 
