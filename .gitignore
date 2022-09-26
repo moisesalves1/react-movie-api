@@ -5,14 +5,11 @@
 /.pnp
 .pnp.js
 
-# API Key
-/config
-
 # testing
 /coverage
 
 # production
-/build
+/src/build
 
 # misc
 .DS_Store
